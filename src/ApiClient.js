@@ -1,70 +1,63 @@
 const fetch = require('node-fetch');
 const isOnline = require('is-online');
 
-class ApiClient {
-	constructor(method, type, url, headers, body) {
-		let out = { ok: null, err: null };
+const defaults = {
+	rest: {
+		headers: {
+			Accept: 'application/json',
+			'Content-type': 'application/json; charset=UTF-8',
+		},
+	},
+};
 
-		this.defaults = {
-			rest: {
-				headers: {
-					Accept: 'application/json',
-					'Content-type': 'application/json; charset=UTF-8',
-				},
-			},
-		};
+function ApiClient(method, type, url, headers, body) {
+	this.type = type.toUpperCase();
+	this.method = method;
+	this.url = url;
+	this.headers =
+		headers != null && headers != undefined && Object.keys(headers).length > 0
+			? headers
+			: defaults.rest.headers;
+	this.body = body || null;
+}
 
-		this.type = type.toUpperCase();
-		this.method = method;
-		this.url = url;
-		this.headers =
-			headers != null &&
-			headers != undefined &&
-			headers != {}
-				? headers
-				: this.defaults.rest.headers;
-		this.body = body || null;
-		out.ok = true;
+ApiClient.prototype.setBody = function (body) {
+	let out = { ok: null, err: null };
 
-		return out;
-	}
-
-	setBody(body) {
-		let out = { ok: null, err: null };
-
-		// TODO: replace with validate.js here
-		if(body != null && typeof body == 'object')
+	// TODO: replace with validate.js here
+	if (body != null && typeof body === 'object') {
 		this.body = body;
 		out.ok = true;
-
-		return out;
+	} else {
+		out.err = ['Invalid body'];
 	}
 
-	async query() {
-		let out = null;
+	return out;
+};
 
-		if (await isOnline()) {
-			const options = {
-				method: this.method,
-				headers: this.headers,
-				body: this.body,
-			};
+ApiClient.prototype.query = async function () {
+	let out = null;
 
-			let results;
-			try {
-				results = await fetch(this.url, options);
-			}
-			catch (error) {	throw error; }
+	if (await isOnline()) {
+		const options = {
+			method: this.method,
+			headers: this.headers,
+			body: this.body,
+		};
+
+		try {
+			const results = await fetch(this.url, options);
 			let data = null;
-			if (this.type == 'REST') {
+			if (this.type === 'REST') {
 				data = await results.json();
 			}
 			return Promise.resolve(data);
+		} catch (error) {
+			throw error;
 		}
-		else {
-			return Promise.reject('Offline');
-		}
+	} else {
+		return Promise.reject('Offline');
 	}
-}
+};
 
 module.exports = ApiClient;
