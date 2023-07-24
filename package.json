@@ -1,0 +1,26 @@
+{
+  "name": "@fahedsl/bazoj.api",
+  "version": "0.0.1",
+  "description": "Simple library for API implementation and consumption (currently Implements only REST).",
+  "main": [
+    "scr/ApiClient.js",
+    "scr/ApiServer.js",
+    "scr/ApiRest.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "wrapper",
+    "js",
+    "simple"
+  ],
+  "author": "fahedsl",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/bazoj/api"
+  }
+}
