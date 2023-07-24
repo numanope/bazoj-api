@@ -1,0 +1,39 @@
+# Node
+node_modules/
+dist/
+
+# Java
+*.class
+*.jar
+target/
+dist/
+
+# Python
+*.py[cod]
+
+# Log
+*.log
+
+# IDE
+.idea/
+*.workspace*
+
+# Unit test reports
+TEST*.xml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Applications
+*.app
+*.exe
+*.war
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
