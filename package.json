@@ -1,5 +1,5 @@
 {
-  "name": "@eqeqo/  bazoj-api",
+  "name": "@eqeqo/bazoj-api",
   "version": "0.0.1", 
   "description": "Simple library for API implementation and consumption (currently Implements only REST).",
   "main": "index.js",
