@@ -25,17 +25,18 @@ const <local name> = require('<package name>');
 ## Contribution guidelines ##
 
 * Each must repo do single task.
-* Always keep it basic, simple and lightweight.
+* Aim for simplicity of use.
+* Keep it basic, simple and lightweight.
 * Avoid syntactic sugar.
-* Always Use single exit point (just one `return` per function).
-* Always wirte cleanest code posible.
+* Use single exit point (just one `return` per function).
+* Write cleanest code posible.
 * Use PascalCase for class names. Use camelCase everywhere else.
 * Indentation should always be 2-spaces-wide tabs.
 * Keep lines below 100 characters whenever posible.
 * Functions should always return if they worked and any results or errors.
 USE AS MODEL:
 ```
-// out.ok: boolean value showing if everything is ok.
+// out.ok: boolean showing if everything is ok.
 // out.load: If ok, is the function output, on error, is ARRAY of errors.
 function ABC () {
 	let out = { ok: false, load: null };
