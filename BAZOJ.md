@@ -33,16 +33,7 @@ const <local name> = require('<package name>');
 * Use PascalCase for class names. Use camelCase everywhere else.
 * Indentation should always be 2-spaces-wide tabs.
 * Keep lines below 100 characters whenever posible.
-* Functions should always return if they worked and any results or errors.
-USE AS MODEL:
-```
-// out.ok: boolean showing if everything is ok.
-// out.load: If ok, is the function output, on error, is ARRAY of errors.
-function ABC () {
-	let out = { ok: false, load: null };
-	// do things;
-	return out;
-}
-```
+
+Also helps:
 * Write tests: Contribute by writing tests. (I'm not good at it, yet.)
 * Code review: Review and suggest improvements to the code.
