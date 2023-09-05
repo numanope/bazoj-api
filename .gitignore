@@ -1,41 +1,78 @@
-# Node
-node_modules/
-dist/
-
-# Java
-*.class
-*.jar
-target/
-dist/
-
-# Python
-*.py[cod]
-
-# Log
-*.log
-
-# IDE
-.idea/
-*.workspace*
-
-# Unit test reports
-TEST*.xml
-
 # OS
-.DS_Store
-Thumbs.db
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+*Icon
+*.Spotlight-V100
+*.Trashes
+*._*
+*~
+*Thumbs.db
+*ehthumbs.db
+*Desktop.ini
+*$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
 
-# Applications
-*.app
+# Packages
+*.7z
+*.csv
+*.dat
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.com
+*.class
+*.dll
 *.exe
-*.war
+*.o
+*.seed
+*.so
+*.swo
+*.swp
+*.swn
+*.swm
+*.out
+*.pid
 
-# Large media files
-*.mp4
-*.tiff
-*.avi
-*.flv
-*.mov
-*.wmv
+# Logs and databases
+*.tmp
+*.log
+*.sql
+*.sqlite
+*.sqlite3
 
-# Project specific
+# Misc.
+*ssl
+*.idea
+*nbproject
+*public/uploads/*
+*!public/uploads/.gitkeep
+
+# Node.js
+*lib-cov
+*lcov.info
+*pids
+*logs
+*results
+*node_modules
+*.node_history
+*lock.json
+
+# Tests
+*coverage
+
+# Strapi
+*.env
+*license.txt
+*exports
+*.cache
+*dist
+*build
+*.strapi-updater.json

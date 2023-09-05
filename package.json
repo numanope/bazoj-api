@@ -1,6 +1,6 @@
 {
   "name": "@bazoj/api",
-  "version": "0.0.2", 
+  "version": "0.0.2",
   "description": "Simple library for API implementation and consumption (currently Implements only REST).",
   "main": "index.js",
   "scripts": {
@@ -12,12 +12,16 @@
     "type": "git",
     "url": "https://gitlab.com/numanope/bazoj/Api"
   },
-
   "keywords": [
     "api",
     "rest",
     "wrapper",
     "js",
     "simple"
-  ]
+  ],
+  "dependencies": {
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.1",
+    "koa-router": "^12.0.0"
+  }
 }
