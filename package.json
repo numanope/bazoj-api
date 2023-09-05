@@ -1,6 +1,6 @@
 {
   "name": "@bazoj/api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple library for API implementation and consumption (currently Implements only REST).",
   "main": "index.js",
   "scripts": {
