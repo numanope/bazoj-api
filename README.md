@@ -12,12 +12,12 @@ It wraps simplest library I found to make it simpler to use.
 Install the specific wanted tool using
 
 ```
-npm install bazoj-api
+npm install @bazoj/api
 ```
 and import in the code using
 
 ```
-import <local name> from 'bazoj-api';
+import <local name> from '@bazoj/api';
 // or
-const <local name> = require('bazoj-api');
+const <local name> = require('@bazoj/api');
 ```
