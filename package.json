@@ -1,6 +1,6 @@
 {
-  "name": "@eqeqo/bazoj-api",
-  "version": "0.0.2", 
+  "name": "@bazoj/api",
+  "version": "0.0.1", 
   "description": "Simple library for API implementation and consumption (currently Implements only REST).",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/bazoj/api"
+    "url": "https://gitlab.com/numanope/bazoj/Api"
   },
 
   "keywords": [
